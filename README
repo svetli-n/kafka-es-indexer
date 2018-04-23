@@ -1,0 +1,11 @@
+Kafka -> Elasticsearch multithreaded bulk indexer, suitable for load tests and fast indexing. Converts CEF log format to json and then inserts to Elasticseqrch.
+
+TODO:
+- Refactor to generic source, transformer and destination interfaces
+
+HOWTO run:
+
+- Set debug level in log4j.properties
+- Run
+mvn clean compile assembly:single
+java -jar target/elasticIndexer-1.0-SNAPSHOT-jar-with-dependencies.jar src/main/resources
